@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Sajib Ahmed — B2B Lead Generation Specialist</title>
+<meta name="description" content="B2B Lead Generation Specialist with 350+ verified leads and 69%+ positive response rate. Helping US businesses build cleaner pipelines remotely.">
+<meta property="og:title" content="Md Sajib Ahmed — B2B Lead Generation Specialist">
+<meta property="og:description" content="350+ verified leads · 69%+ response rate · 4 US clients · 18+ months pipeline ownership">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0d0d0d;--white:#fafafa;
+  --accent:#1a6b4a;--accent-light:#d4f5e2;--accent-mid:#0f4a32;
+  --mid:#2d2d2d;--muted:#5a5a5a;--line:#e2e2e2;--surface:#f4f4f2;
+  --serif:'DM Serif Display',serif;
+  --sans:'Syne',sans-serif;
+  --mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--black);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.1rem 3rem;border-bottom:1px solid var(--line);
+  position:sticky;top:0;background:rgba(250,250,250,.96);
+  backdrop-filter:blur(8px);z-index:200;
+}
+.nav-logo{font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;color:var(--muted)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.83rem;letter-spacing:.05em;transition:color .2s}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;
+  padding:.45rem 1.1rem;border:1px solid var(--black);
+  text-decoration:none;color:var(--black);transition:all .2s;
+}
+.nav-cta:hover{background:var(--black);color:var(--white)}
+
+/* ── HERO ── */
+.hero{padding:5.5rem 3rem 4rem;max-width:1060px}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;
+  color:var(--accent);text-transform:uppercase;
+  margin-bottom:1.3rem;display:flex;align-items:center;gap:.6rem;
+}
+.hero-eyebrow::before{content:'';width:2.2rem;height:1px;background:var(--accent)}
+.hero h1{
+  font-family:var(--serif);font-size:clamp(3rem,6vw,5.8rem);
+  line-height:1.04;color:var(--black);margin-bottom:1.6rem;
+}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{
+  font-size:1rem;color:var(--muted);max-width:540px;
+  line-height:1.8;margin-bottom:3rem;
+}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:0;
+  border:1px solid var(--line);margin-bottom:2.5rem;
+}
+.stat{
+  padding:1.4rem 2rem;border-right:1px solid var(--line);
+  display:flex;flex-direction:column;flex:1;min-width:120px;
+}
+.stat:last-child{border-right:none}
+.stat-n{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--black)}
+.stat-l{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--muted);margin-top:.3rem}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-dark{
+  display:inline-flex;align-items:center;gap:.45rem;
+  padding:.78rem 1.8rem;background:var(--black);color:var(--white);
+  text-decoration:none;font-size:.86rem;letter-spacing:.04em;
+  border:1px solid var(--black);transition:all .22s;font-family:var(--sans);font-weight:600;
+}
+.btn-dark:hover{background:transparent;color:var(--black)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:.45rem;
+  padding:.78rem 1.8rem;background:transparent;color:var(--black);
+  text-decoration:none;font-size:.86rem;letter-spacing:.04em;
+  border:1px solid var(--line);transition:all .22s;font-family:var(--sans);font-weight:600;
+}
+.btn-ghost:hover{border-color:var(--black)}
+
+/* ── SECTIONS ── */
+section{padding:4.5rem 3rem;border-top:1px solid var(--line)}
+.sec-label{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase;
+  margin-bottom:2.8rem;display:flex;align-items:center;gap:.9rem;
+}
+.sec-label::after{content:'';width:60px;height:1px;background:var(--line)}
+
+/* ── SKILLS ── */
+.skills-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+}
+.skill-cell{
+  background:var(--white);padding:1.6rem 1.4rem;
+  transition:background .18s;cursor:default;
+}
+.skill-cell:hover{background:var(--accent-light)}
+.skill-name{font-size:.97rem;font-weight:700;margin-bottom:.4rem}
+.skill-desc{font-family:var(--mono);font-size:.76rem;color:var(--muted);line-height:1.55}
+
+/* ── WORK ── */
+.work-list{display:flex;flex-direction:column}
+.work-entry{
+  display:grid;grid-template-columns:220px 1fr;
+  gap:2.5rem;padding:2.2rem 0;border-bottom:1px solid var(--line);
+}
+.work-entry:last-child{border-bottom:none}
+.work-left{display:flex;flex-direction:column;padding-top:.15rem}
+.wl-company{font-weight:700;font-size:.97rem;margin-bottom:.2rem}
+.wl-date{font-family:var(--mono);font-size:.7rem;letter-spacing:.07em;color:var(--muted)}
+.wl-type{
+  display:inline-block;margin-top:.55rem;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;
+  padding:.22rem .6rem;border:1px solid var(--line);color:var(--muted);
+  width:fit-content;
+}
+.wl-role{font-size:.82rem;color:var(--accent);font-weight:600;margin-top:.3rem}
+.work-right h3{
+  font-family:var(--serif);font-size:1.28rem;
+  margin-bottom:.9rem;line-height:1.25;
+}
+.work-right ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.work-right ul li{
+  font-size:.88rem;color:var(--mid);
+  padding-left:1.3rem;position:relative;line-height:1.65;
+}
+.work-right ul li::before{
+  content:'→';position:absolute;left:0;
+  color:var(--accent);font-family:var(--mono);font-size:.8rem;top:.05rem;
+}
+.work-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
+.tag{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;
+  padding:.22rem .65rem;border:1px solid var(--line);color:var(--muted);
+}
+
+/* ── CASE STUDIES ── */
+.cases{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+}
+.case{background:var(--white);padding:2.1rem;transition:background .15s}
+.case:hover{background:var(--surface)}
+.case-n{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted);margin-bottom:.8rem}
+.case-title{font-family:var(--serif);font-size:1.3rem;line-height:1.25;margin-bottom:.8rem}
+.case-desc{font-size:.86rem;color:var(--muted);line-height:1.7;margin-bottom:1.3rem}
+.case-result{
+  display:inline-block;background:var(--accent-light);
+  color:var(--accent-mid);font-family:var(--mono);
+  font-size:.72rem;padding:.3rem .8rem;letter-spacing:.04em;font-weight:500;
+}
+
+/* ── PROCESS ── */
+.process{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));
+  border:1px solid var(--line);
+}
+.proc-step{
+  padding:1.8rem 1.5rem;border-right:1px solid var(--line);
+}
+.proc-step:last-child{border-right:none}
+.proc-n{
+  font-family:var(--serif);font-size:2.6rem;
+  color:var(--line);margin-bottom:.8rem;line-height:1;
+}
+.proc-title{font-weight:700;font-size:.88rem;margin-bottom:.4rem}
+.proc-desc{font-family:var(--mono);font-size:.76rem;color:var(--muted);line-height:1.55}
+
+/* ── TOOLS ── */
+.tools-wrap{display:flex;flex-wrap:wrap;gap:.5rem}
+.tool-pill{
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;
+  padding:.38rem 1rem;border:1px solid var(--black);color:var(--black);
+  transition:all .18s;cursor:default;
+}
+.tool-pill:hover{background:var(--black);color:var(--white)}
+.tool-section-title{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
+  color:var(--muted);text-transform:uppercase;margin:1.6rem 0 .7rem;
+}
+.tool-section-title:first-child{margin-top:0}
+
+/* ── OUTREACH SAMPLES ── */
+.samples-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.sample-card{
+  border:1px solid var(--line);padding:1.8rem;
+  background:var(--white);
+}
+.sample-label{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:.9rem;
+  padding-bottom:.6rem;border-bottom:1px solid var(--line);
+}
+.sample-subject{font-weight:700;font-size:.88rem;margin-bottom:.8rem}
+.sample-body{font-size:.83rem;color:var(--mid);line-height:1.75;white-space:pre-line}
+.sample-note{
+  margin-top:1rem;font-family:var(--mono);font-size:.7rem;
+  color:var(--muted);padding-top:.7rem;border-top:1px solid var(--line);
+}
+
+/* ── ACHIEVEMENTS BAND ── */
+.achievements{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+}
+.ach{background:var(--surface);padding:1.5rem 1.6rem;text-align:center}
+.ach-n{font-family:var(--serif);font-size:2rem;color:var(--accent);margin-bottom:.3rem}
+.ach-l{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;color:var(--muted)}
+
+/* ── CTA ── */
+.cta-block{
+  background:var(--black);color:var(--white);
+  padding:5rem 3rem;
+}
+.cta-block .sec-label{color:#444}
+.cta-block .sec-label::after{background:#333}
+.cta-h{
+  font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,4rem);
+  margin-bottom:1rem;line-height:1.08;
+}
+.cta-sub{color:#888;font-size:.95rem;margin-bottom:2.2rem;max-width:480px;line-height:1.75}
+.btn-white{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.85rem 2.1rem;background:var(--white);color:var(--black);
+  text-decoration:none;font-size:.88rem;font-weight:700;letter-spacing:.04em;
+  border:1px solid var(--white);transition:all .22s;
+}
+.btn-white:hover{background:transparent;color:var(--white)}
+.contact-details{
+  margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:1.6rem;
+}
+.contact-details span{
+  font-family:var(--mono);font-size:.78rem;color:#555;letter-spacing:.05em;
+}
+.contact-details a{color:#777;text-decoration:none;transition:color .2s}
+.contact-details a:hover{color:var(--white)}
+
+/* ── FOOTER ── */
+footer{
+  padding:1.6rem 3rem;display:flex;
+  justify-content:space-between;align-items:center;
+  border-top:1px solid var(--line);
+}
+footer p{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.05em}
+
+/* ── RESPONSIVE ── */
+@media(max-width:720px){
+  nav{padding:1rem 1.2rem}
+  .nav-links{display:none}
+  .hero{padding:3rem 1.2rem 2rem}
+  section{padding:3rem 1.2rem}
+  .hero-stats .stat{padding:1rem 1.2rem}
+  .work-entry{grid-template-columns:1fr;gap:1rem}
+  .proc-step{border-right:none;border-bottom:1px solid var(--line)}
+  .proc-step:last-child{border-bottom:none}
+  .cta-block{padding:3.5rem 1.2rem}
+  footer{padding:1.2rem;flex-direction:column;gap:.5rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">sajibahmed · lead gen</span>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#outreach">Outreach</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:sajib.ahmed.cu@gmail.com">Hire Me →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">B2B Lead Generation · Cold Outreach · CRM Pipeline</div>
+  <h1>I build pipelines.<br><em>People actually reply.</em></h1>
+  <p class="hero-sub">
+    18+ months of end-to-end outbound ownership for US SMB and SaaS clients —
+    from ICP scoping and verified list building to cold email sequences, calling cadences,
+    and HubSpot handoff. Remote from Bangladesh, fully async-capable.
+  </p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-n">350+</span>
+      <span class="stat-l">Verified Leads</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">69%+</span>
+      <span class="stat-l">Response Rate</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">240+</span>
+      <span class="stat-l">Positive Replies</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">4</span>
+      <span class="stat-l">US Clients Served</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">18+</span>
+      <span class="stat-l">Months Experience</span>
+    </div>
+  </div>
+  <div class="hero-ctas">
+    <a class="btn-dark" href="mailto:sajib.ahmed.cu@gmail.com">Get In Touch →</a>
+    <a class="btn-ghost" href="#portfolio">See Case Studies</a>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-label">Core Competencies</div>
+  <div class="skills-grid">
+    <div class="skill-cell">
+      <div class="skill-name">Prospect Research</div>
+      <div class="skill-desc">ICP definition, LinkedIn Sales Nav, Apollo.io, manual sourcing for US markets</div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-name">Cold Email Outreach</div>
+      <div class="skill-desc">Multi-step sequences, personalization at scale, A/B subject testing, deliverability</div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-name">Cold Calling</div>
+      <div class="skill-desc">US-timezone calls, objection handling, discovery scripts, CRM call logging</div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-name">CRM Management</div>
+      <div class="skill-desc">HubSpot pipeline setup, stage hygiene, deal tracking, SDR-to-closer handoff</div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-name">List Building & Verification</div>
+      <div class="skill-desc">Triple-verified B2B data, deduplication, bounce rate reduction, pre-upload QA</div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-name">Response Analysis</div>
+      <div class="skill-desc">Open/reply tracking, targeting refinement, copy iteration based on live data</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-label">Work Experience</div>
+  <div class="work-list">
+
+    <div class="work-entry">
+      <div class="work-left">
+        <span class="wl-company">Inbound Automation</span>
+        <span class="wl-date">FEB 2025 — PRESENT</span>
+        <span class="wl-type">Full-Time · Remote</span>
+        <span class="wl-role">Lead Generation Specialist</span>
+      </div>
+      <div class="work-right">
+        <h3>Full-cycle outbound ownership for US clients</h3>
+        <ul>
+          <li>Owns the complete outbound cycle — ICP scoping, prospect sourcing via LinkedIn Sales Navigator and Apollo.io, contact verification, outreach execution, and CRM handoff</li>
+          <li>Delivered 350+ verified leads with a 69%+ positive response rate (240+ replies from ~350 contacts) across structured cold email sequences and follow-up calling cadences</li>
+          <li>Reduced CRM data quality errors by enforcing a pre-upload validation workflow, eliminating duplicates and invalid records before they enter the pipeline</li>
+          <li>Manages HubSpot pipeline stages to ensure accurate deal tracking and clean SDR-to-closer handoffs across concurrent client accounts</li>
+        </ul>
+        <div class="work-tags">
+          <span class="tag">Apollo.io</span>
+          <span class="tag">LinkedIn Sales Nav</span>
+          <span class="tag">HubSpot</span>
+          <span class="tag">Cold Calling</span>
+          <span class="tag">Cold Email</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-entry">
+      <div class="work-left">
+        <span class="wl-company">MiniTech Solutions</span>
+        <span class="wl-date">JAN — DEC 2024</span>
+        <span class="wl-type">Contract · Remote</span>
+        <span class="wl-role">Lead Generation Specialist</span>
+      </div>
+      <div class="work-right">
+        <h3>ICP-aligned prospecting for US SaaS clients</h3>
+        <ul>
+          <li>Built ICP-aligned prospect lists for 3 US-based SaaS clients, reducing wasted outreach by targeting verified decision-makers matched against defined buyer personas</li>
+          <li>Improved average email deliverability by sourcing and triple-verifying B2B contact data before campaign upload, reducing bounce rates by an estimated 30–40%</li>
+          <li>Maintained structured CRM records across all client accounts, enabling consistent follow-up and accurate pipeline reporting</li>
+        </ul>
+        <div class="work-tags">
+          <span class="tag">List Building</span>
+          <span class="tag">Email Verification</span>
+          <span class="tag">CRM Management</span>
+          <span class="tag">Google Sheets</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-entry">
+      <div class="work-left">
+        <span class="wl-company">GrowthPilot LLC</span>
+        <span class="wl-date">AUG — DEC 2024</span>
+        <span class="wl-type">Contract · Remote</span>
+        <span class="wl-role">Lead Research Specialist</span>
+      </div>
+      <div class="work-right">
+        <h3>SMB prospect research & list segmentation</h3>
+        <ul>
+          <li>Built segmented prospect lists across the US SMB market for 2 active client campaigns, applying industry, company size, and buyer persona filters to improve targeting precision</li>
+          <li>Delivered 150+ researched prospect records per month; refined list segmentation based on campaign response data, contributing to measurable improvement in open and reply rates</li>
+          <li>Flagged and removed low-quality contacts before sending, protecting sender reputation and domain health across active campaigns</li>
+        </ul>
+        <div class="work-tags">
+          <span class="tag">Market Research</span>
+          <span class="tag">Lead Segmentation</span>
+          <span class="tag">Prospect Targeting</span>
+          <span class="tag">Apollo.io</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-entry">
+      <div class="work-left">
+        <span class="wl-company">NovaStart Studio</span>
+        <span class="wl-date">MAR — JUL 2024</span>
+        <span class="wl-type">Part-Time · Remote</span>
+        <span class="wl-role">Virtual Assistant</span>
+      </div>
+      <div class="work-right">
+        <h3>Executive support & early sales pipeline work</h3>
+        <ul>
+          <li>Managed founder calendar, inbox, and prospect meeting coordination for a 3-person early-stage startup, maintaining zero scheduling conflicts across a 5-month engagement</li>
+          <li>Contributed 80+ enriched lead records to the sales team pipeline through manual research, data entry, and CRM hygiene tasks — building the foundational skills later applied in specialist roles</li>
+        </ul>
+        <div class="work-tags">
+          <span class="tag">HubSpot</span>
+          <span class="tag">Email Management</span>
+          <span class="tag">Lead Research</span>
+          <span class="tag">Data Entry</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="portfolio">
+  <div class="sec-label">Case Studies</div>
+  <div class="cases">
+    <div class="case">
+      <div class="case-n">01 / Cold Email Campaign</div>
+      <div class="case-title">69% Response Rate for SaaS Client</div>
+      <p class="case-desc">Built a 350-contact verified prospect list targeting US-based VP-level buyers via Apollo.io and LinkedIn Sales Navigator. Wrote and tested a 3-step cold email sequence with personalized first lines, achieving a 69%+ positive response rate across all campaigns at Inbound Automation.</p>
+      <span class="case-result">350 leads · 240+ replies · 69%+ response rate</span>
+    </div>
+    <div class="case">
+      <div class="case-n">02 / List Building & Verification</div>
+      <div class="case-title">30–40% Bounce Rate Reduction</div>
+      <p class="case-desc">For 3 US SaaS clients at MiniTech Solutions, implemented a triple-verification workflow before any contact was uploaded to the CRM or added to an email sequence. Resulted in an estimated 30–40% reduction in bounce rates and improved sender domain health across all campaigns.</p>
+      <span class="case-result">3 clients · ~35% bounce rate drop · cleaner pipeline</span>
+    </div>
+    <div class="case">
+      <div class="case-n">03 / CRM Pipeline Management</div>
+      <div class="case-title">Zero-Error HubSpot Handoff System</div>
+      <p class="case-desc">Designed and enforced a pre-upload validation workflow in HubSpot for concurrent US client accounts. Eliminated duplicate and invalid records before pipeline entry, enabling accurate deal tracking and clean SDR-to-closer handoffs with no data loss between stages.</p>
+      <span class="case-result">0 duplicate records · clean multi-client pipeline</span>
+    </div>
+  </div>
+</section>
+
+<!-- OUTREACH SAMPLES -->
+<section id="outreach">
+  <div class="sec-label">Sample Cold Emails</div>
+  <div class="samples-grid">
+    <div class="sample-card">
+      <div class="sample-label">Template A · SaaS Prospect · First Touch</div>
+      <div class="sample-subject">Subject: quick question about [Company]'s outbound</div>
+      <div class="sample-body">Hi [First Name],
+
+I was looking at [Company] and noticed you're in the [industry] space — I work with a few similar businesses helping them build cleaner outbound pipelines.
+
+Most of the founders I talk to are either buried in bad data or spending hours on manual prospecting that isn't converting.
+
+Would it make sense to connect this week? Happy to share what's been working.
+
+— Sajib</div>
+      <div class="sample-note">Avg open rate: 55–65% · Reply rate: 20–30% in testing</div>
+    </div>
+    <div class="sample-card">
+      <div class="sample-label">Template B · SMB Owner · Follow-Up #1</div>
+      <div class="sample-subject">Subject: Re: quick question about [Company]'s outbound</div>
+      <div class="sample-body">Hi [First Name],
+
+Just following up in case my last note got buried.
+
+One thing I've seen consistently: most SMBs lose 20–30% of their outreach potential to unverified contacts and generic messaging.
+
+I help fix both — starting with a clean, verified list matched to your ICP.
+
+Worth a 15-min call to see if it fits?
+
+— Sajib</div>
+      <div class="sample-note">Sent 3 days after Template A · accounts for 40% of total replies</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="sec-label">How I Work</div>
+  <div class="process">
+    <div class="proc-step">
+      <div class="proc-n">01</div>
+      <div class="proc-title">ICP Definition</div>
+      <p class="proc-desc">Industry, headcount, title, pain points, tech stack — no outreach without a documented target profile</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">02</div>
+      <div class="proc-title">Source & Research</div>
+      <p class="proc-desc">LinkedIn Sales Nav, Apollo.io, and manual search to find verified, high-fit decision-makers</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">03</div>
+      <div class="proc-title">Verify & Clean</div>
+      <p class="proc-desc">Triple-verification, deduplication, and enrichment before any contact enters the pipeline</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">04</div>
+      <div class="proc-title">Outreach & Cadence</div>
+      <p class="proc-desc">Personalized email sequences + calling cadences, logged in HubSpot with follow-up triggers</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">05</div>
+      <div class="proc-title">Analyze & Optimize</div>
+      <p class="proc-desc">Track open/reply rates and refine copy, targeting, and timing based on live response data</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="sec-label">Tools & Stack</div>
+
+  <div class="tool-section-title">Prospecting & Research</div>
+  <div class="tools-wrap" style="margin-bottom:1.2rem">
+    <span class="tool-pill">Apollo.io</span>
+    <span class="tool-pill">LinkedIn Sales Navigator</span>
+    <span class="tool-pill">Hunter.io</span>
+    <span class="tool-pill">Snov.io</span>
+    <span class="tool-pill">ZoomInfo</span>
+  </div>
+
+  <div class="tool-section-title">Outreach & Sequencing</div>
+  <div class="tools-wrap" style="margin-bottom:1.2rem">
+    <span class="tool-pill">Instantly.ai</span>
+    <span class="tool-pill">Lemlist</span>
+    <span class="tool-pill">Mailshake</span>
+    <span class="tool-pill">Cold Calling (US)</span>
+  </div>
+
+  <div class="tool-section-title">CRM & Data</div>
+  <div class="tools-wrap" style="margin-bottom:1.2rem">
+    <span class="tool-pill">HubSpot CRM</span>
+    <span class="tool-pill">Google Sheets</span>
+    <span class="tool-pill">Microsoft Excel</span>
+    <span class="tool-pill">Notion</span>
+  </div>
+
+  <div class="tool-section-title">Communication & Admin</div>
+  <div class="tools-wrap">
+    <span class="tool-pill">Slack</span>
+    <span class="tool-pill">Loom</span>
+    <span class="tool-pill">Google Calendar</span>
+    <span class="tool-pill">Gmail</span>
+    <span class="tool-pill">Zoom</span>
+  </div>
+</section>
+
+<!-- KEY ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="sec-label">Key Achievements at a Glance</div>
+  <div class="achievements">
+    <div class="ach">
+      <div class="ach-n">350+</div>
+      <div class="ach-l">Verified leads generated</div>
+    </div>
+    <div class="ach">
+      <div class="ach-n">69%+</div>
+      <div class="ach-l">Positive response rate</div>
+    </div>
+    <div class="ach">
+      <div class="ach-n">~35%</div>
+      <div class="ach-l">Bounce rate reduction</div>
+    </div>
+    <div class="ach">
+      <div class="ach-n">4</div>
+      <div class="ach-l">US clients served simultaneously</div>
+    </div>
+    <div class="ach">
+      <div class="ach-n">18+</div>
+      <div class="ach-l">Months pipeline ownership</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<div class="cta-block" id="contact">
+  <div class="sec-label">Let's Work Together</div>
+  <h2 class="cta-h">Open to remote<br>full-time roles.</h2>
+  <p class="cta-sub">
+    Actively looking for a Lead Generation, SDR, or Sales Development Representative role
+    with a US-based company. Available full-time, remote, with strong async communication.
+    I show up, I follow up, and I deliver results.
+  </p>
+  <a class="btn-white" href="mailto:sajib.ahmed.cu@gmail.com">sajib.ahmed.cu@gmail.com →</a>
+  <div class="contact-details">
+    <span>📍 Chittagong, Bangladesh</span>
+    <span>📞 +880 1854 546077</span>
+    <span><a href="https://linkedin.com/in/sajibahmedsuvro" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+    <span>🕐 Available US Eastern & Pacific hours</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Md Sajib Ahmed · B2B Lead Generation Specialist</p>
+  <p>Chittagong, Bangladesh · Open to remote work</p>
+</footer>
+
+</body>
+</html>
