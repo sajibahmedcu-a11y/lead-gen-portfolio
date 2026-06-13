@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email List Validator | Sajib Ahmed</title>
+  <meta name="description" content="A real interactive tool to validate, clean and de-duplicate email lists. Built by Sajib Ahmed." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <header class="app-bar">
+    <div class="wrap bar-inner">
+      <a href="../../index.html" class="back"><i class="fa-solid fa-arrow-left"></i> Portfolio</a>
+      <h1><i class="fa-solid fa-envelope-circle-check"></i> Email Validator</h1>
+      <button id="themeToggle" class="icon-btn" aria-label="theme"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="lede">Paste a raw email list below. The tool validates syntax, flags disposable &amp; role-based addresses, removes duplicates, and lets you export clean results to CSV.</p>
+
+    <section class="stats">
+      <div class="stat"><span>Total</span><strong id="stTotal">0</strong></div>
+      <div class="stat ok"><span>Valid</span><strong id="stValid">0</strong></div>
+      <div class="stat bad"><span>Invalid</span><strong id="stInvalid">0</strong></div>
+      <div class="stat warn"><span>Risky</span><strong id="stRisky">0</strong></div>
+      <div class="stat"><span>Duplicates</span><strong id="stDupes">0</strong></div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h2><i class="fa-solid fa-paste"></i> Input</h2>
+        <textarea id="input" rows="14" placeholder="jane@company.com&#10;info@acme.com&#10;bad-email@&#10;test@mailinator.com"></textarea>
+        <div class="actions">
+          <button class="btn" id="validateBtn"><i class="fa-solid fa-circle-check"></i> Validate</button>
+          <button class="btn ghost" id="sampleBtn">Load sample</button>
+          <button class="btn ghost" id="clearBtn"><i class="fa-solid fa-eraser"></i> Clear</button>
+        </div>
+      </section>
+
+      <section class="panel wide">
+        <div class="toolbar">
+          <select id="filter">
+            <option value="all">All results</option>
+            <option value="valid">Valid only</option>
+            <option value="invalid">Invalid only</option>
+            <option value="risky">Risky only</option>
+          </select>
+          <button class="btn ghost" id="copyBtn"><i class="fa-solid fa-copy"></i> Copy valid</button>
+          <button class="btn ghost" id="exportBtn"><i class="fa-solid fa-file-csv"></i> Export CSV</button>
+        </div>
+        <div id="results" class="results"></div>
+        <div id="empty" class="empty"><i class="fa-solid fa-envelope-open-text"></i><p>Results appear here after you validate.</p></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
